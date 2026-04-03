@@ -1,0 +1,8 @@
+.table-sm{
+    color: white;
+    font-size: medium;
+
+}
+.table-sm.hover{
+    color: aquamarine;
+}

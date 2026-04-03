@@ -1,0 +1,338 @@
+/* ============================================
+   GLOBAL ANIMATIONS
+============================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ============================================
+   MAIN CONTAINERS
+============================================ */
+.custom-listgroup-left,
+.custom-order-summary-card {
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-bottom: 20px;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* ============================================
+   LIST GROUP ITEMS
+============================================ */
+.custom-summary-item,
+.custom-listgroup-item,
+.custom-nested-item {
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 12px;
+  background: white;
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.custom-summary-item:last-child,
+.custom-listgroup-item:last-child,
+.custom-nested-item:last-child {
+  border-bottom: none;
+}
+
+/* ============================================
+   PRODUCT IMAGE
+============================================ */
+.custom-product-image {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* ============================================
+   PLACE ORDER BUTTON (FINAL FIXED)
+============================================ */
+.custom-place-order-btn {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border: none;
+  border-radius: 10px;
+  padding: 14px 20px;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  width: 100%;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+
+  /* IMPORTANT FIXES */
+  transform: none !important;
+  rotate: 0deg !important;
+  animation: none !important;
+  position: relative !important;
+}
+
+/* Hover */
+.custom-place-order-btn:hover {
+  background: linear-gradient(135deg, #0056b3, #004085);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* PlaceOrderScreen.css */
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation class */
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Optional: style overrides for order page */
+.custom-order-summary-card,
+.custom-listgroup-left {
+  border-radius: 12px;
+  padding: 10px;
+  background-color: #fefefe;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.custom-summary-item,
+.custom-listgroup-item,
+.custom-nested-item {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-product-image {
+  width: 100%;
+  max-width: 70px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Main containers with custom border radius */
+.custom-listgroup-left {
+  border-radius: 15px !important;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.5s ease-in-out both;
+}
+
+.custom-order-summary-card {
+  border-radius: 15px !important;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideInRight 0.5s ease-in-out both;
+}
+
+/* Individual list group items */
+.custom-listgroup-item {
+  border-radius: 0 !important;
+  border: none !important;
+  border-bottom: 1px solid #dee2e6 !important;
+  animation: fadeInUp 0.4s ease-in-out both;
+}
+
+.custom-listgroup-item:first-child {
+  border-top-left-radius: 15px !important;
+  border-top-right-radius: 15px !important;
+}
+
+.custom-listgroup-item:last-child {
+  border-bottom-left-radius: 15px !important;
+  border-bottom-right-radius: 15px !important;
+  border-bottom: none !important;
+}
+
+/* Order summary specific styles */
+.custom-summary-listgroup {
+  border-radius: 15px !important;
+}
+
+.custom-summary-item {
+  border-radius: 0 !important;
+  border: none !important;
+  border-bottom: 1px solid #dee2e6 !important;
+  animation: fadeInUp 0.4s ease-in-out both;
+}
+
+.custom-summary-item:first-child {
+  border-top-left-radius: 15px !important;
+  border-top-right-radius: 15px !important;
+}
+
+.custom-summary-item:last-child {
+  border-bottom-left-radius: 15px !important;
+  border-bottom-right-radius: 15px !important;
+  border-bottom: none !important;
+}
+
+/* Nested list group for order items */
+.custom-nested-listgroup {
+  border-radius: 10px !important;
+  margin-top: 10px;
+}
+
+.custom-nested-item {
+  border-radius: 0 !important;
+  border: none !important;
+  border-bottom: 1px solid #dee2e6 !important;
+  animation: fadeInUp 0.4s ease-in-out both;
+}
+
+.custom-nested-item:first-child {
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+}
+
+.custom-nested-item:last-child {
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+  border-bottom: none !important;
+}
+
+/* Product image styling */
+.custom-product-image {
+  border-radius: 8px !important;
+  animation: fadeInUp 0.3s ease-in-out both;
+}
+
+/* Place order button styling */
+.custom-place-order-btn {
+  border-radius: 10px !important;
+  padding: 12px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  animation: pulse 1s ease-in-out infinite alternate;
+}
+
+.custom-place-order-btn:hover {
+  transform: translateY(2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional styling for better appearance */
+.custom-listgroup-left,
+.custom-order-summary-card {
+  margin-bottom: 20px;
+}
+
+/* Override Bootstrap's default styles if needed */
+.list-group-flush .list-group-item {
+  border-left: 0;
+  border-right: 0;
+}
+
+/* Custom border radius variations */
+.border-radius-small {
+  border-radius: 8px !important;
+}
+
+.border-radius-medium {
+  border-radius: 12px !important;
+}
+
+.border-radius-large {
+  border-radius: 20px !important;
+}
+
+.border-radius-extra-large {
+  border-radius: 25px !important;
+}
+
+/* If you want rounded corners only on specific sides */
+.border-radius-top {
+  border-top-left-radius: 15px !important;
+  border-top-right-radius: 15px !important;
+}
+
+.border-radius-bottom {
+  border-bottom-left-radius: 15px !important;
+  border-bottom-right-radius: 15px !important;
+}
+
+.border-radius-left {
+  border-top-left-radius: 15px !important;
+  border-bottom-left-radius: 15px !important;
+}
+
+.border-radius-right {
+  border-top-right-radius: 15px !important;
+  border-bottom-right-radius: 15px !important;
+}
+.custom-place-order-btn {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.custom-place-order-btn:hover {
+  background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+}

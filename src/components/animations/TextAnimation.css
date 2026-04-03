@@ -1,0 +1,245 @@
+.animation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #ffe6f0, #ffb6c1, #ff7fa8);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Glittering stars background */
+.stars::before,
+.stars::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: transparent;
+  top: -50%;
+  left: -50%;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: glitter 3s linear infinite;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+@keyframes glitter {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  to {
+    transform: rotate(360deg) scale(1.1);
+  }
+}
+
+
+/* Big heart shape */
+.big-heart {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  background-color: #ff4f81;
+  transform: rotate(45deg);
+  box-shadow: 0 0 25px rgba(255, 100, 150, 0.8);
+  animation: pulse 2s infinite ease-in-out;
+  overflow: visible; /* ✅ allows slogan to appear outside */
+}
+
+.big-heart::before,
+.big-heart::after {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  background-color: #ff4f81;
+  border-radius: 50%;
+}
+
+.big-heart::before {
+  top: -115px;
+  left: 0;
+}
+
+.big-heart::after {
+  left: -115px;
+  top: 0;
+}
+
+/* Centered text (separate from heart div) */
+.slogan {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Playfair Display", serif;
+  line-height: 1.4;
+  width: 80%;
+  word-wrap: break-word;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Falling small hearts */
+.small-heart {
+  position: absolute;
+  top: -30px;
+  width: 15px;
+  height: 15px;
+  background-color: #ff4f81;
+  transform: rotate(45deg);
+  border-radius: 3px;
+  opacity: 0.9;
+  animation: fall linear infinite;
+}
+
+.small-heart::before,
+.small-heart::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #ff4f81;
+  border-radius: 50%;
+}
+
+.small-heart::before {
+  top: -7px;
+  left: 0;
+}
+
+.small-heart::after {
+  left: -7px;
+  top: 0;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: rotate(45deg) scale(1);
+  }
+  50% {
+    transform: rotate(45deg) scale(1.1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* It is Old CSS but it is working without the three animation */
+
+/* 
+.heart-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #ffeff6, #ffb6c1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.text {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #e60073;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out forwards;
+  text-shadow: 0 0 15px rgba(230, 0, 115, 0.4);
+  letter-spacing: 1px;
+  padding: 0 20px;
+  z-index: 10;
+}
+
+/* .heart {
+  position: absolute;
+  bottom: -20px;
+  width: 20px;
+  height: 20px;
+  background-color: #ff4081;
+  transform: rotate(45deg);
+  animation: floatUp 6s ease-in infinite;
+  opacity: 0.8;
+} */
+
+/* .heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ff4081;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+/* Heart floating animation */
+/* @keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1) rotate(45deg);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) scale(0.7) rotate(45deg);
+    opacity: 0;
+  }
+} */
+
+/* Fade-in text */
+/* @keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
+*/

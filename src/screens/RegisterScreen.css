@@ -1,0 +1,284 @@
+/* RegisterScreen.css */
+
+/* Register Form Container Styling */
+.register-form-container {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 2.8rem;
+  margin: 2rem auto;
+  max-width: 550px;
+  border: 1px solid #e3e6ea;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-form-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;  border-radius: 16px 16px 0 0;
+}
+
+/* Form Input Fields */
+.register-form-container .form-control {
+  border-radius: 14px;
+  border: 2.5px solid #dee2e6;
+  padding: 1rem 1.3rem;
+  font-size: 1rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #f8f9fa;
+  font-weight: 500;
+}
+
+.register-form-container .form-control:focus {
+  border-color: #007bff;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 0.3rem rgba(0, 123, 255, 0.12);
+  border-radius: 14px;
+  transform: translateY(-2px);
+}
+
+.register-form-container .form-control:hover {
+  border-color: #adb5bd;
+  background-color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.register-form-container .form-control::placeholder {
+  color: #6c757d;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+/* Form Labels */
+.register-form-container .form-label {
+  font-weight: 700;
+  color: #343a40;
+  margin-bottom: 0.7rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  position: relative;
+  padding-left: 12px;
+}
+
+.register-form-container .form-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 16px;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  border-radius: 2px;
+}
+
+/* Register Button */
+.register-form-container .btn-primary {
+  border-radius: 14px;
+  padding: 1rem 3rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
+}
+
+.register-form-container .btn-primary:hover {
+  background: linear-gradient(135deg, #218838 0%, #1ea888 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(40, 167, 69, 0.4);
+}
+
+.register-form-container .btn-primary:active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(40, 167, 69, 0.3);
+}
+
+/* Form Title */
+.register-form-container h1 {
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+  position: relative;
+  padding-bottom: 1.2rem;
+  border-bottom: 3px solid #005ec2;
+}
+
+.register-form-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  
+  border-radius: 2px;
+}
+
+/* Form Groups */
+.register-form-container .form-group {
+  margin-bottom: 1.8rem;
+  position: relative;
+}
+
+/* Login Link Row */
+.register-form-container .login-link-row {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e9ecef;
+  text-align: center;
+  border-radius: 0 0 16px 16px;
+}
+
+.register-form-container .login-link-row a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  display: inline-block;
+  background: linear-gradient(135deg, transparent 0%, rgba(0, 123, 255, 0.1) 100%);
+}
+
+.register-form-container .login-link-row a:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Error and Loading Messages */
+.register-form-container .alert {
+  border-radius: 12px;
+  border: none;
+  padding: 1.2rem 1.8rem;
+  margin-bottom: 1.8rem;
+  font-weight: 600;
+  border-left: 6px solid;
+}
+
+.register-form-container .alert-danger {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: white;
+  box-shadow: 0 6px 18px rgba(220, 53, 69, 0.3);
+  border-left-color: #bd2130;
+}
+
+/* Loader Styling */
+.register-form-container .spinner-border {
+  margin: 1.5rem auto;
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  color: #28a745;
+}
+
+/* Password Strength Indicator (Optional Enhancement) */
+.register-form-container .form-control[type="password"]:focus + .password-strength {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.password-strength {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .register-form-container {
+    margin: 1rem;
+    padding: 2.2rem 1.8rem;
+    border-radius: 14px;
+  }
+  
+  .register-form-container .form-control {
+    border-radius: 12px;
+    padding: 0.85rem 1.1rem;
+  }
+  
+  .register-form-container .btn-primary {
+    border-radius: 12px;
+    padding: 0.9rem 2.5rem;
+    font-size: 1rem;
+  }
+  
+  .register-form-container h1 {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .register-form-container {
+    padding: 1.8rem 1.2rem;
+    border-radius: 12px;
+  }
+  
+  .register-form-container .form-control {
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+  }
+  
+  .register-form-container .btn-primary {
+    border-radius: 10px;
+    padding: 0.8rem 2rem;
+    font-size: 0.95rem;
+  }
+  
+  .register-form-container h1 {
+    font-size: 1.7rem;
+  }
+}
+
+/* Animation for form appearance */
+.register-form-container {
+  animation: bounceInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes bounceInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Focus ring for accessibility */
+.register-form-container .form-control:focus-visible {
+  outline: 3px solid #28a745;
+  outline-offset: 3px;
+}
+
+/* Success state for filled inputs */
+.register-form-container .form-control:valid:not(:placeholder-shown) {
+  border-color: #28a745;
+  background-color: #f8fff9;
+}
+
+.register-form-container .form-control:valid:not(:placeholder-shown):focus {
+  box-shadow: 0 0 0 0.3rem rgba(40, 167, 69, 0.12);
+}

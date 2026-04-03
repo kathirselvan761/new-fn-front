@@ -1,0 +1,36 @@
+.step-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.step-nav .nav-link {
+  padding: 8px 15px;
+  border: 2px solid #50293d;
+  border-radius: 30px;
+  color: #d63384;
+  background-color: rgb(94, 51, 51);
+  font-weight: 600;
+  transition: 0.3s;
+  text-align: center;
+} 
+
+.step-nav .disabled {
+  border-color: #aaa !important;
+  color: #aaa !important;
+  cursor: not-allowed;
+}
+
+.step-nav .active {
+  background-color: #50293d;
+  color: white;
+  border-color: #50293d;
+}
+
+@media (max-width: 600px) {
+  .step-nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

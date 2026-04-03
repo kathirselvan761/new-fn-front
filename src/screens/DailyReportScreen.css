@@ -1,0 +1,163 @@
+.daily-report {
+  padding: 30px;
+  background: #f3f4f6;
+  min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+.dr-header {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.dr-header h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.dr-header-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dr-header-actions input {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn.success {
+  background: #22c55e;
+  color: white;
+}
+
+.btn.danger {
+  background: #ef4444;
+  color: white;
+}
+
+.btn.outline {
+  border: 1px solid #3b82f6;
+  color: #3b82f6;
+  background: transparent;
+}
+
+/* ================= STATS ================= */
+.dr-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.stat {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.stat h3 {
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+.stat span {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 20px;
+}
+
+.green { color: #22c55e; }
+.blue { color: #3b82f6; }
+
+/* ================= REPORT TABLE ================= */
+.dr-report {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.dr-report h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+th, td {
+  border: 1px solid #e5e7eb;
+  padding: 10px;
+  font-size: 13px;
+  text-align: center;
+}
+
+th {
+  background: #3b82f6;
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  /* background: #f9fafb; */
+}
+
+.empty {
+  text-align: center;
+  padding: 20px;
+  color: #6b7280;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .dr-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dr-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .daily-report {
+    padding: 15px;
+  }
+
+  .dr-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}

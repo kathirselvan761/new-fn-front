@@ -1,0 +1,83 @@
+.door-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Doors */
+.door-left, .door-right {
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #8b4513, #5d2f0a);
+  transition: transform 8s ease-in-out; /* 🕒 slower open (8s) */
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.3);
+}
+
+.door-left {
+  left: 0;
+  justify-content: flex-end;
+  padding-right: 40px;
+  border-right: 2px solid #654321;
+}
+
+.door-right {
+  right: 0;
+  justify-content: flex-start;
+  padding-left: 40px;
+  border-left: 2px solid #654321;
+}
+
+.door-left.opening {
+  transform: translateX(-100%);
+}
+
+.door-right.opening {
+  transform: translateX(100%);
+}
+
+/* Handles */
+.door-handle {
+  width: 20px;
+  height: 60px;
+  background: linear-gradient(to bottom, #ffd700, #b8860b);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Text */
+.welcome-text {
+  position: absolute;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+  z-index: 10;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.welcome-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #ffd700, #ff6b6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.welcome-text p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}

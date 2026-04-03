@@ -1,0 +1,203 @@
+/* LoginScreen.css */
+
+/* Login Form Container Styling */
+.login-form-container {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 2.5rem;
+  margin: 2rem auto;
+  max-width: 500px;
+  border: 1px solid #e9ecef;
+}
+
+/* Form Input Fields */
+.login-form-container .form-control {
+  border-radius: 12px;
+  border: 2px solid #dee2e6;
+  padding: 0.85rem 1.2rem;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #fafafa;
+}
+
+.login-form-container .form-control:focus {
+  border-color: #007bff;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.15);
+  border-radius: 12px;
+  transform: translateY(-1px);
+}
+
+.login-form-container .form-control:hover {
+  border-color: #adb5bd;
+  background-color: #ffffff;
+}
+
+/* Form Labels */
+.login-form-container .form-label {
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Sign In Button */
+.login-form-container .btn-primary {
+  border-radius: 12px;
+  padding: 0.85rem 2.5rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border: none;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.login-form-container .btn-primary:hover {
+  background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.login-form-container .btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+/* Form Title */
+.login-form-container h1 {
+  border-bottom: 3px solid #005ec2;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.login-form-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  
+  border-radius: 2px;
+}
+
+/* Form Groups */
+.login-form-container .form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Register Link Row */
+.login-form-container .register-link-row {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e9ecef;
+  text-align: center;
+}
+
+.login-form-container .register-link-row a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+}
+
+.login-form-container .register-link-row a:hover {
+  color: #0056b3;
+  background-color: rgba(0, 123, 255, 0.1);
+  text-decoration: none;
+}
+
+/* Error and Loading Messages */
+.login-form-container .alert {
+  border-radius: 10px;
+  border: none;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.login-form-container .alert-danger {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+/* Loader Styling */
+.login-form-container .spinner-border {
+  margin: 1rem auto;
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-form-container {
+    margin: 1rem;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+  }
+  
+  .login-form-container .form-control {
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+  }
+  
+  .login-form-container .btn-primary {
+    border-radius: 10px;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .login-form-container h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .login-form-container {
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+  }
+  
+  .login-form-container .form-control {
+    border-radius: 8px;
+  }
+  
+  .login-form-container .btn-primary {
+    border-radius: 8px;
+  }
+}
+
+/* Animation for form appearance */
+.login-form-container {
+  animation: slideInDown 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Focus ring for accessibility */
+.login-form-container .form-control:focus-visible {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}

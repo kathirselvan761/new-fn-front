@@ -1,0 +1,13 @@
+.click-message {
+  position: absolute;
+  bottom: 30px;
+  color: #ccc;
+  font-size: 1.2rem;
+  animation: blink 1.5s infinite;
+  z-index: 5;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}

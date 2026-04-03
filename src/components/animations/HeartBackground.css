@@ -1,0 +1,264 @@
+/* .heart-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(135deg, #ff4268 0%, hsl(3, 100%, 73%) 100%);
+}
+
+.heart-wrapper {
+  position: absolute;
+  top: -100px;
+  animation: floatdown 15s linear infinite;
+  will-change: transform;
+}
+
+.heart {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #d2042d 0%, #d2042d 100%);
+  transform: rotate(45deg);
+  opacity: 0.85;
+  filter: drop-shadow(0 0 8px rgba(255, 23, 68, 0.5));
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #d2042d 0%, #d2042d 100%);
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -15px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: -15px;
+}
+
+/* Sparkle stars inside hearts */
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  animation: twinkle 1.5s ease-in-out infinite;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+.sparkle::before,
+.sparkle::after {
+  content: '';
+  position: absolute;
+  background: white;
+}
+
+.sparkle::before {
+  width: 8px;
+  height: 1px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sparkle::after {
+  width: 1px;
+  height: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes floatdown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(calc(100vh + 200px));
+    opacity: 0.5;
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: rotate(-45deg) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(-45deg) scale(1);
+  }
+} 
+
+
+
+/* .heart-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(135deg, #ff4268 0%, hsl(3, 100%, 73%) 100%);
+}
+
+.heart-wrapper {
+  position: absolute;
+  animation: floatdown 10s linear infinite;
+}
+
+.heart {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #d2042d 0%, #d2042d 100%);
+  transform: rotate(45deg);
+  opacity: 0.85;
+  filter: drop-shadow(0 0 8px rgba(255, 23, 68, 0.5));
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #d2042d 0%, #d2042d 100%);
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: -10px;
+}
+
+/* Sparkle stars inside hearts */
+/* .sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  animation: twinkle 1.5s ease-in-out infinite;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+.sparkle::before,
+.sparkle::after {
+  content: '';
+  position: absolute;
+  background: white;
+}
+
+.sparkle::before {
+  width: 8px;
+  height: 1px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sparkle::after {
+  width: 1px;
+  height: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes floatdown {
+  0% {
+    transform: translateY(-10vh) rotate(45deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(100vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: rotate(-45deg) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(-45deg) scale(1);
+  }
+}  */
+
+
+.heart-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #d2042d;
+  transform: rotate(45deg);
+  animation: floatdown 10s linear infinite;
+  opacity: 0.8;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #d2042d;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: -10px;
+}
+
+@keyframes floatdown {
+  0% {
+    transform: translateY(-10vh) rotate(45deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(100vh) rotate(45deg);
+    opacity: 0;
+  }
+}
